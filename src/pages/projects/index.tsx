@@ -4,47 +4,157 @@ import { ExternalLink, Github } from "lucide-react";
 const PROJECTS = [
   {
     id: "01",
-    title: "Portfolio V2",
+    title: "Photoku",
     year: "2025",
-    description:
-      "Personal portfolio with parallax animations, 3D rotating Rubik's cube, interactive sketchbook with page-turn physics, YouTube music integration, and full dark mode.",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    github: "https://github.com/wiweka24",
+    description: "Engineered the buyer-side Photoku 'Mini App' within My Telkomsel, implementing core biometric face recognition for user registration and a personalized marketplace.",
+    features: [
+      "Biometric Marketplace: Face recognition for personalized photo finding.",
+      "Seller Dashboard: Full business management for photographers with secure validation.",
+      "Full Transaction Management: Handles commerce loop from reports to payment gateways."
+    ],
+    role: "Mobile & Web Engineer",
+    tags: ["TaroJS", "WeApp", "ResNet", "Golang", "Python", "MySQL", "Docker"],
+    github: null,
     live: null,
   },
   {
     id: "02",
-    title: "Anime Tracker",
-    year: "2024",
-    description:
-      "Track your watchlist with AniList API integration. Features watchlist management, episode progress tracking, and personalised recommendations.",
-    tags: ["Next.js", "AniList API", "Tailwind CSS", "Prisma"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: "03",
-    title: "Dev Tools CLI",
-    year: "2024",
-    description:
-      "Command-line toolkit for developers. Scaffolds projects, manages dotfiles, and automates repetitive dev tasks with a single command.",
-    tags: ["Node.js", "TypeScript", "Commander.js"],
-    github: "#",
+    title: "Rumah Aman",
+    year: "2025",
+    description: "Engineered Home Wi-Fi Parental Control module enabling remote management of network topology and comprehensive device profiling.",
+    features: [
+      "Wi-Fi Remote Management: Remotely manage SSID, passwords, and network topology.",
+      "Connected Device Monitoring: Manage connection times and blacklist devices.",
+      "Device Profiles: Group devices by family members and set usage policies."
+    ],
+    role: "Mobile Engineer",
+    tags: ["TaroJS", "WeApp", "Golang", "MySQL", "Docker"],
+    github: null,
     live: null,
   },
   {
+    id: "03",
+    title: "Sentra Properti",
+    year: "2025",
+    description: "Built the complete Sentra Properti frontend and integrated backend APIs, including payment gateways for property seekers and agents.",
+    features: [
+      "Property Search: Search listed properties and contact agents directly.",
+      "Property Posting: Credit-based listing management for partners.",
+      "Real-time Monitoring: Track listings with real-time graphics and leads."
+    ],
+    role: "Web Engineer",
+    tags: ["ReactJS", "Axios", "Java", "MySQL"],
+    github: null,
+    live: "https://sentraproperti.com",
+  },
+  {
     id: "04",
-    title: "AI Chat",
+    title: "V-NSP",
+    year: "2024",
+    description: "Engineered core MyTelkomsel feature detecting WhatsApp call events to trigger video ring back tone overlays.",
+    features: [
+      "Ringtone Visualization: Change standard ringing sounds into video.",
+      "Caller Video Display: Display videos on the caller's smartphone while ringing.",
+      "In-App Purchase: Integrated content store for video management."
+    ],
+    role: "Mobile & Web Engineer",
+    tags: ["Java (Android)", "ReactJS (Webview)", "RTK Query", "Golang", "MySQL", "Docker"],
+    github: null,
+    live: null,
+  },
+  {
+    id: "05",
+    title: "AyoLari",
+    year: "2024",
+    description: "Migrated native run tracking module into high-performance ReactJS WebView with deep native device API integration.",
+    features: [
+      "Outdoor Run Tracking: Record distance, pace, calories, and heart rate.",
+      "Event Participation: Join various running events and view schedules.",
+      "Earn Rewards: Reward system based on achieved step targets."
+    ],
+    role: "Web Engineer",
+    tags: ["Java (Android)", "Swift (iOS)", "ReactJS (Webview)", "RTK Query", "Golang", "MySQL", "Docker"],
+    github: null,
+    live: null,
+  },
+  {
+    id: "06",
+    title: "Mental Health AI",
+    year: "2024",
+    description: "Fine-tuned small-scale LLMs (Llama3, Gemma2) for empathetic mental health support using context-aware methodologies.",
+    features: [
+      "LLM Performance Validation: Verified fine-tuning effectiveness on small LLMs.",
+      "Response Quality: Improved accuracy and empathy in AI responses.",
+      "Optimal Model Identification: Identified Qwen2 7B as the optimal base."
+    ],
+    role: "AI Engineer",
+    tags: ["Python", "Kaggle", "Unsloth"],
+    github: null,
+    live: "https://huggingface.co",
+  },
+  {
+    id: "07",
+    title: "Edutry",
+    year: "2024",
+    description: "Engineered a three-tier exam platform for students, partners, and administrators with comprehensive management tools.",
+    features: [
+      "User Page: Search, purchase, and take mock exams online.",
+      "Partner Page: Functionality for partners to create and sell exams.",
+      "Admin Dashboard: Manage entire system content and operations."
+    ],
+    role: "Web Engineer",
+    tags: ["NextJS", "Axios", "Golang", "PostgreSQL", "Docker"],
+    github: null,
+    live: null,
+  },
+  {
+    id: "08",
+    title: "Smart Waste Bin",
     year: "2023",
-    description:
-      "Real-time chat application with AI assistant integration. Supports multiple conversation threads, markdown rendering, and code highlighting.",
-    tags: ["React", "OpenAI API", "Firebase"],
-    github: "#",
-    live: "#",
+    description: "Integrated IoT and AI for automatic waste sorting using YOLOv8, ESP microcontroller, and a real-time monitoring dashboard.",
+    features: [
+      "AI Sorting: YOLOv8 image recognition linked with servo control.",
+      "IoT Integration: ESP firmware for sensor data and command handling.",
+      "Monitoring Dashboard: Real-time visualization of fill levels."
+    ],
+    role: "IoT & Web Engineer",
+    tags: ["NextJS", "ExpressJS", "MongoDB", "Python", "C++", "YOLOv8"],
+    github: "https://github.com/wiweka24",
+    live: null,
+  },
+  {
+    id: "09",
+    title: "Pedotan",
+    year: "2022",
+    description: "Native Android app for plant disease detection using ML models and MVVM architecture.",
+    features: [
+      "ML Integration: Detect diseases, deficiencies, and farmland conditions.",
+      "MVVM Architecture: Built for maintainability and scalability.",
+      "Efficient Data: Used Retrofit 2 and Shared Preferences."
+    ],
+    role: "Mobile Engineer",
+    tags: ["Kotlin", "GCP", "Python", "Firebase"],
+    github: "https://github.com/wiweka24",
+    live: null,
+  },
+  {
+    id: "10",
+    title: "GMCO Ticketing",
+    year: "2022",
+    description: "Online ticket purchasing system with a dynamic, real-time interactive cinema-style seating map.",
+    features: [
+      "Interactive Seat Map: Real-time availability reflecting visually.",
+      "Payment Integration: Secure, scalable transaction process.",
+      "State Management: Used Zustand for complex seating logic."
+    ],
+    role: "Web Engineer",
+    tags: ["NextJS", "Zustand", "Golang", "PostgreSQL", "Docker"],
+    github: "https://github.com/wiweka24",
+    live: null,
   },
 ];
 
-const ROTATIONS = ["-1.5deg", "1deg", "-0.5deg", "1.5deg"];
+const ROTATIONS = ["-1.5deg", "1deg", "-0.5deg", "1.5deg", "-1deg", "0.5deg", "1.2deg", "-0.8deg", "0.3deg", "-1.3deg"];
 
 export default function Projects() {
   const [dark] = useState(() => document.documentElement.classList.contains("dark"));
@@ -118,10 +228,10 @@ export default function Projects() {
       </div>
 
       {/* ── Main layout ── */}
-      <div className="absolute inset-4 flex items-center gap-8 px-16">
+      <div className="absolute inset-4 flex items-center gap-12 px-20">
 
         {/* LEFT: project list */}
-        <div className="flex w-72 flex-shrink-0 flex-col justify-center gap-0">
+        <div className="flex w-72 flex-shrink-0 flex-col justify-center gap-0 overflow-y-auto max-h-[80vh] pr-4 scrollbar-hide">
           <p className="mb-6 text-[10px] uppercase tracking-[0.35em] opacity-40">
             {lang === "en" ? "Selected works" : "制作実績"}
           </p>
@@ -152,74 +262,65 @@ export default function Projects() {
             <span className="text-xs tracking-widest">
               {String(selected + 1).padStart(2, "0")} / {String(PROJECTS.length).padStart(2, "0")}
             </span>
-            <div className="flex flex-col gap-1">
-              <div
-                className="flex h-6 w-6 items-center justify-center rounded border-[1.5px] border-black dark:border-white"
-                style={{ boxShadow: dark ? "0 2px 0 #fff" : "0 2px 0 #000" }}
-              >
-                <svg viewBox="0 0 10 10" fill="currentColor" className="h-2.5 w-2.5">
-                  <path d="M5,2 L9,8 L1,8 Z" />
-                </svg>
-              </div>
-              <div
-                className="flex h-6 w-6 items-center justify-center rounded border-[1.5px] border-black dark:border-white"
-                style={{ boxShadow: dark ? "0 2px 0 #fff" : "0 2px 0 #000" }}
-              >
-                <svg viewBox="0 0 10 10" fill="currentColor" className="h-2.5 w-2.5">
-                  <path d="M5,8 L9,2 L1,2 Z" />
-                </svg>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* RIGHT: project detail */}
         <div className="relative flex flex-1 items-center justify-center">
-          {/* Big watermark number */}
-          <span
-            className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 select-none font-black leading-none"
-            style={{ fontSize: "clamp(140px, 20vw, 280px)", opacity: 0.04 }}
-          >
-            {project.id}
-          </span>
-
           {/* Card */}
           <div
-            className="relative w-full max-w-[520px]"
+            className="relative w-full max-w-[640px]"
             style={{
               transform: animating
-                ? `rotate(${ROTATIONS[selected]}) translateY(12px)`
-                : `rotate(${ROTATIONS[selected]}) translateY(0px)`,
+                ? `rotate(${ROTATIONS[selected % ROTATIONS.length]}) translateY(12px)`
+                : `rotate(${ROTATIONS[selected % ROTATIONS.length]}) translateY(0px)`,
               opacity: animating ? 0 : 1,
               transition: "transform 0.18s ease, opacity 0.18s ease",
             }}
           >
             <div
-              className="rounded-2xl border-4 border-black bg-white p-8 dark:border-white dark:bg-black"
+              className="rounded-2xl border-4 border-black bg-white p-10 dark:border-white dark:bg-black overflow-y-auto max-h-[85vh] scrollbar-hide"
               style={{ boxShadow: dark ? "6px 6px 0 #fff" : "6px 6px 0 #000" }}
             >
-              <div className="mb-5 flex items-start justify-between">
-                <span className="text-7xl font-black leading-none opacity-[0.07]">{project.id}</span>
-                <span className="rounded-full border-2 border-black px-3 py-1 text-[10px] font-black uppercase tracking-widest dark:border-white">
-                  {project.year}
-                </span>
+              <div className="mb-6 flex items-start justify-between">
+                <div className="flex flex-col gap-1">
+                  <span className="rounded-full border-2 border-black px-3 py-1 text-[10px] font-black uppercase tracking-widest dark:border-white w-fit">
+                    {project.year}
+                  </span>
+                  <p className="text-[10px] uppercase font-black opacity-40 mt-1">{project.role}</p>
+                </div>
+                <span className="text-6xl font-black leading-none opacity-[0.07]">{project.id}</span>
               </div>
 
-              <h2 className="mb-3 text-4xl font-black uppercase leading-none tracking-tighter">
+              <h2 className="mb-4 text-5xl font-black uppercase leading-none tracking-tighter">
                 {project.title}
               </h2>
 
-              <div className="mb-4 h-[3px] w-12 bg-black dark:bg-white" />
+              <div className="mb-6 h-[4px] w-16 bg-black dark:bg-white" />
 
-              <p className="mb-6 text-sm font-medium leading-relaxed opacity-60">
+              <p className="mb-8 text-base font-medium leading-relaxed opacity-60">
                 {project.description}
               </p>
 
-              <div className="mb-6 flex flex-wrap gap-2">
+              {project.features && (
+                <div className="mb-8">
+                  <p className="text-[10px] uppercase tracking-widest opacity-40 mb-3">Key Features</p>
+                  <ul className="flex flex-col gap-2">
+                    {project.features.map((f, fi) => (
+                      <li key={fi} className="text-xs font-bold flex gap-2">
+                        <span className="text-black/30 dark:text-white/30">•</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <div className="mb-8 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border-2 border-black/30 px-3 py-1 text-[10px] font-black uppercase tracking-wider dark:border-white/30"
+                    className="rounded-lg border-2 border-black px-3 py-1 text-[10px] font-black uppercase tracking-wider dark:border-white bg-black/5 dark:bg-white/5"
                   >
                     {tag}
                   </span>
@@ -232,11 +333,11 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex cursor-pointer items-center gap-2 rounded-xl border-2 border-black px-4 py-2 text-xs font-black uppercase tracking-wider transition-all hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
-                    style={{ boxShadow: dark ? "2px 2px 0 #fff" : "2px 2px 0 #000" }}
+                    className="flex cursor-pointer items-center gap-2 rounded-xl border-2 border-black px-5 py-3 text-xs font-black uppercase tracking-wider transition-all hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+                    style={{ boxShadow: dark ? "3px 3px 0 #fff" : "3px 3px 0 #000" }}
                   >
-                    <Github className="size-3.5" />
-                    GitHub
+                    <Github className="size-4" />
+                    Source
                   </a>
                 )}
                 {project.live && (
@@ -244,11 +345,11 @@ export default function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex cursor-pointer items-center gap-2 rounded-xl border-2 border-black bg-black px-4 py-2 text-xs font-black uppercase tracking-wider text-white transition-all hover:opacity-75 dark:border-white dark:bg-white dark:text-black"
-                    style={{ boxShadow: dark ? "2px 2px 0 #fff" : "2px 2px 0 #000" }}
+                    className="flex cursor-pointer items-center gap-2 rounded-xl border-2 border-black bg-black px-5 py-3 text-xs font-black uppercase tracking-wider text-white transition-all hover:opacity-75 dark:border-white dark:bg-white dark:text-black"
+                    style={{ boxShadow: dark ? "3px 3px 0 #fff" : "3px 3px 0 #000" }}
                   >
-                    <ExternalLink className="size-3.5" />
-                    Live
+                    <ExternalLink className="size-4" />
+                    Visit Site
                   </a>
                 )}
               </div>
