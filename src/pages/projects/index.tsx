@@ -192,22 +192,22 @@ export default function Projects() {
   return (
     <div className="relative flex h-screen w-screen select-none bg-white font-black text-black transition-colors duration-300 dark:bg-black dark:text-white">
       {/* ── Frame border ── */}
-      <div className="absolute top-0 z-30 h-4 w-screen bg-black dark:bg-white" />
-      <div className="absolute bottom-0 z-30 h-4 w-screen bg-black dark:bg-white" />
-      <div className="absolute left-0 z-30 h-screen w-4 bg-black dark:bg-white" />
-      <div className="absolute right-0 z-30 h-screen w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 left-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 left-4 z-30 h-4 w-4 rounded-tl-full bg-white dark:bg-black" />
-      <div className="absolute top-4 right-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 right-4 z-30 h-4 w-4 rounded-tr-full bg-white dark:bg-black" />
-      <div className="absolute bottom-4 left-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute bottom-4 left-4 z-30 h-4 w-4 rounded-bl-full bg-white dark:bg-black" />
-      <div className="absolute right-4 bottom-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute right-4 bottom-4 z-30 h-4 w-4 rounded-br-full bg-white dark:bg-black" />
+      <div className="absolute top-0 z-30 h-[6px] md:h-4 w-screen bg-black dark:bg-white" />
+      <div className="absolute bottom-0 z-30 h-[6px] md:h-4 w-screen bg-black dark:bg-white" />
+      <div className="absolute left-0 z-30 h-screen w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute right-0 z-30 h-screen w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-tl-full bg-white dark:bg-black" />
+      <div className="absolute top-[6px] md:top-4 right-[6px] md:right-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 right-[6px] md:right-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-tr-full bg-white dark:bg-black" />
+      <div className="absolute bottom-[6px] md:bottom-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute bottom-[6px] md:bottom-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-bl-full bg-white dark:bg-black" />
+      <div className="absolute right-[6px] md:right-4 bottom-[6px] md:bottom-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute right-[6px] md:right-4 bottom-[6px] md:bottom-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-br-full bg-white dark:bg-black" />
 
       {/* ── Grid background ── */}
       <div
-        className="absolute inset-4"
+        className="absolute inset-[6px] md:inset-4"
         style={{
           backgroundImage: `
             linear-gradient(${dark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)"} 1px, transparent 1px),
@@ -228,10 +228,10 @@ export default function Projects() {
       </div>
 
       {/* ── Main layout ── */}
-      <div className="absolute inset-4 flex items-center gap-12 px-20">
+      <div className="absolute inset-[6px] md:inset-4 flex flex-col md:flex-row items-center gap-6 md:gap-12 px-4 md:px-20 overflow-y-auto md:overflow-visible">
 
         {/* LEFT: project list */}
-        <div className="flex w-72 flex-shrink-0 flex-col justify-center gap-0 overflow-y-auto max-h-[80vh] pr-4 scrollbar-hide">
+        <div className="flex w-full md:w-72 flex-shrink-0 flex-col justify-start md:justify-center gap-0 md:max-h-[80vh] md:pr-4 scrollbar-hide mt-8 md:mt-0">
           <p className="mb-6 text-[10px] uppercase tracking-[0.35em] opacity-40">
             {lang === "en" ? "Selected works" : "制作実績"}
           </p>

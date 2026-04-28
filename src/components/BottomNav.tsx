@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Home, User, Briefcase, Zap, Palette } from "lucide-react";
 
-const NAV_TABS = ["Home", "About", "Projects", "Skills", "Drawings"];
+const NAV_TABS = [
+  { label: "Home", icon: Home, route: "/" },
+  { label: "About", icon: User, route: null },
+  { label: "Projects", icon: Briefcase, route: "/projects" },
+  { label: "Skills", icon: Zap, route: null },
+  { label: "Drawings", icon: Palette, route: "/drawings" },
+];
 
-const ROUTE_INDEX: Record<string, number> = {
+const ROUTE_TO_INDEX: Record<string, number> = {
   "/": 0,
   "/projects": 2,
   "/drawings": 4,
-};
-
-const INDEX_ROUTE: Record<number, string> = {
-  0: "/",
-  2: "/projects",
-  4: "/drawings",
 };
 
 export default function BottomNav() {
@@ -34,15 +35,15 @@ export default function BottomNav() {
     return () => observer.disconnect();
   }, []);
 
-  const activeIndex = ROUTE_INDEX[location.pathname] ?? 0;
+  const activeIndex = ROUTE_TO_INDEX[location.pathname] ?? 0;
   const n = NAV_TABS.length;
 
   return (
     <div
-      className="absolute bottom-8 left-1/2 z-20 flex w-[calc(100%-4rem)] -translate-x-1/2 rounded-full border-2 border-black bg-white p-1 dark:border-white dark:bg-black"
+      className="absolute bottom-8 left-1/2 z-20 flex w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] -translate-x-1/2 rounded-full border-2 md:border-4 border-black bg-white p-1 dark:border-white dark:bg-black transition-all duration-300"
       style={{ height: "64px", boxShadow: dark ? "4px 4px 0 #fff" : "4px 4px 0 #000" }}
     >
-      {/* Sliding active pill — width and left account for p-1 (4px) padding */}
+      {/* Sliding active pill */}
       <div
         className="pointer-events-none absolute top-1 bottom-1"
         style={{
@@ -60,18 +61,17 @@ export default function BottomNav() {
 
       {NAV_TABS.map((tab, i) => (
         <button
-          key={tab}
-          onClick={() => { if (INDEX_ROUTE[i]) navigate(INDEX_ROUTE[i]); }}
-          className="relative z-10 flex flex-1 cursor-pointer items-center justify-center font-bold active:scale-95"
+          key={tab.label}
+          onClick={() => { if (tab.route) navigate(tab.route); }}
+          className="relative z-10 flex flex-1 cursor-pointer items-center justify-center font-bold active:scale-95 transition-all duration-300"
           style={{
-            fontSize: "15px",
             color: i === activeIndex
               ? dark ? "#000" : "#fff"
               : dark ? "#555" : "#aaa",
-            transition: "color 0.35s ease",
           }}
         >
-          {tab}
+          <span className="hidden md:block text-sm uppercase tracking-widest">{tab.label}</span>
+          <tab.icon className="block md:hidden size-6" />
         </button>
       ))}
     </div>

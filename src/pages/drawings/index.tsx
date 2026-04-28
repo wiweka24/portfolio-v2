@@ -118,22 +118,22 @@ export default function Drawings() {
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-white font-black text-black transition-colors duration-300 dark:bg-black dark:text-white">
       {/* ── Frame border ── */}
-      <div className="absolute top-0 z-30 h-4 w-screen bg-black dark:bg-white" />
-      <div className="absolute bottom-0 z-30 h-4 w-screen bg-black dark:bg-white" />
-      <div className="absolute left-0 z-30 h-screen w-4 bg-black dark:bg-white" />
-      <div className="absolute right-0 z-30 h-screen w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 left-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 left-4 z-30 h-4 w-4 rounded-tl-full bg-white dark:bg-black" />
-      <div className="absolute top-4 right-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute top-4 right-4 z-30 h-4 w-4 rounded-tr-full bg-white dark:bg-black" />
-      <div className="absolute bottom-4 left-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute bottom-4 left-4 z-30 h-4 w-4 rounded-bl-full bg-white dark:bg-black" />
-      <div className="absolute right-4 bottom-4 z-30 h-4 w-4 bg-black dark:bg-white" />
-      <div className="absolute right-4 bottom-4 z-30 h-4 w-4 rounded-br-full bg-white dark:bg-black" />
+      <div className="absolute top-0 z-30 h-[6px] md:h-4 w-screen bg-black dark:bg-white" />
+      <div className="absolute bottom-0 z-30 h-[6px] md:h-4 w-screen bg-black dark:bg-white" />
+      <div className="absolute left-0 z-30 h-screen w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute right-0 z-30 h-screen w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-tl-full bg-white dark:bg-black" />
+      <div className="absolute top-[6px] md:top-4 right-[6px] md:right-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute top-[6px] md:top-4 right-[6px] md:right-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-tr-full bg-white dark:bg-black" />
+      <div className="absolute bottom-[6px] md:bottom-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute bottom-[6px] md:bottom-4 left-[6px] md:left-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-bl-full bg-white dark:bg-black" />
+      <div className="absolute right-[6px] md:right-4 bottom-[6px] md:bottom-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 bg-black dark:bg-white" />
+      <div className="absolute right-[6px] md:right-4 bottom-[6px] md:bottom-4 z-30 h-[6px] md:h-4 w-[6px] md:w-4 rounded-br-full bg-white dark:bg-black" />
 
       {/* ── Grid background ── */}
       <div
-        className="absolute inset-4"
+        className="absolute inset-[6px] md:inset-4"
         style={{
           backgroundImage: `
             linear-gradient(${dark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)"} 1px, transparent 1px),
@@ -145,17 +145,16 @@ export default function Drawings() {
 
       {/* ── Centered area between borders and nav ── */}
       <div
-        className="absolute flex flex-col items-center justify-center gap-6"
-        style={{ top: "16px", bottom: "96px", left: "16px", right: "16px" }}
+        className="absolute inset-[6px] md:inset-4 flex flex-col items-center justify-center gap-6 bottom-[96px]"
       >
 
       {/* 3D Book Container */}
       <div
         className="relative flex items-center justify-center"
         style={{
-          perspective: "2000px",
-          width: "80vw",
-          height: "70vh",
+          perspective: "1200px",
+          width: window.innerWidth < 768 ? "280px" : "500px",
+          height: window.innerWidth < 768 ? "380px" : "600px",
         }}
       >
         <div
