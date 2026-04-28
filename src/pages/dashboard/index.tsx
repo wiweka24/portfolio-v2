@@ -1,5 +1,5 @@
 import { pp_silvia } from "../../assets";
-import { Cat, Download, FileText, Github, Globe, Linkedin, Mail, Moon, Pause, Play, SkipBack, SkipForward, Star, Sun, X } from "lucide-react";
+import { Cat, Download, FileText, Github, Globe, Linkedin, Mail, Moon, Pause, Play, SkipBack, SkipForward, Sun, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 
